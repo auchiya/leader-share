@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Profile } from "./Profile";
 import { LeaderBoardPage } from "./LeaderBoardPage";
+import { BadgeDetails } from "./BadgeDetails";
 
 const App = () => {
   
@@ -16,6 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LeaderBoardPage />} />
         <Route path="/profile" element={<Profile/>} />
+        <Route path="/badgedetails" element={<BadgeDetails />} />
       </Routes>
     </BrowserRouter>
   );
