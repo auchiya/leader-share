@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { BadgeList } from "./BadgeList"
+import { BetDetails } from "./BetDetails"
 
 export const Profile = () => {
     return (
@@ -12,9 +13,7 @@ export const Profile = () => {
                         <ProfileName>
                             Arkaitz Vizuete
                         </ProfileName>
-                        <BetDetails>
-                            130 Bets | 1.300€
-                        </BetDetails>
+                        <BetDetails />
                     </ProfileData>
                     <ShareButton>
                         S
@@ -38,10 +37,10 @@ const ProfileCard = styled.div`
     height: 200px;
     width: 400px;
 
-    border: 1px solid white;
+    border: 1px solid #00cc2c;
     border-radius: 25px;
 
-    background-color: #111;
+    background-color: #343434;
 `
 
 const ProfileDetails = styled.div`
@@ -70,13 +69,9 @@ const ProfileData = styled.div`
 const ProfileName = styled.p`
     font-size: 20px;
     font-weight: bold;
+    color: white;
 
     margin: 0;
-`
-
-const BetDetails = styled.div`
-    display: flex;
-    flex-direction: row;
 `
 
 const ShareButton = styled.button`

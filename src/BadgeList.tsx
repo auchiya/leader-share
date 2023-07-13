@@ -8,9 +8,6 @@ export const BadgeList = () => {
             <Badge src='https://picsum.photos/200' />
             <Badge src='https://picsum.photos/200' />
             <Badge src='https://picsum.photos/200' />
-            <Badge src='https://picsum.photos/200' />
-            <Badge src='https://picsum.photos/200' />
-            <Badge src='https://picsum.photos/200' />
         </Container>
     )
 }
@@ -20,15 +17,14 @@ const Container = styled.div`
     flex-direction: row;
     gap: 15px;
 
-    padding: 20px;
+    padding: 10px;
 
     border-top: solid 1px white;
 `
 
 const Badge = styled.img`
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
 
-    border: 1px solid #00cc2c;
     border-radius: 100%;
 `

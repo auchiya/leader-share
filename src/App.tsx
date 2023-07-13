@@ -14,7 +14,6 @@ const App = () => {
         <Route path="/" element={<LeaderBoardPage />} />
         <Route path="/profile" element={<Profile/>} />
       </Routes>
-
     </BrowserRouter>
   );
 };
