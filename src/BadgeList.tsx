@@ -1,13 +1,21 @@
 import React from "react"
 import styled from "styled-components"
 
+import HorseBadge from './assets/badges/horse_badge.png';
+import SportsBadge from './assets/badges/sports_badge.png';
+import CasinoBadge from './assets/badges/casino_badge.png';
+
 export const BadgeList = () => {
+
+    const handleBadgeClick = () => {
+
+    }
+
     return (
         <Container>
-            <Badge src='https://picsum.photos/200' />
-            <Badge src='https://picsum.photos/200' />
-            <Badge src='https://picsum.photos/200' />
-            <Badge src='https://picsum.photos/200' />
+            <Badge src={HorseBadge} onClick={handleBadgeClick} />
+            <Badge src={SportsBadge} onClick={handleBadgeClick} />
+            <Badge src={CasinoBadge} onClick={handleBadgeClick} />
         </Container>
     )
 }
@@ -27,4 +35,6 @@ const Badge = styled.img`
     width: 35px;
 
     border-radius: 100%;
+
+    cursor: pointer;
 `
