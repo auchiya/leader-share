@@ -1,5 +1,8 @@
 import React from "react";
 import "./App.css";
+import Leaderboard from "./Leaderboard";
+import { leaderboards } from "./data";
+import { ShareLeaderBoard }  from "./ShareLeaderBoard";
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Profile } from "./Profile";
