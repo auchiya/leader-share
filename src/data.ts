@@ -8,6 +8,7 @@ const generatePlayers = (start: number): Player[] => {
       name: `Player ${i}`,
       nickname: `P${i}`,
       score: Math.floor(Math.random() * 1000), // Random score between 0 and 1000
+      profilePicture: `https://picsum.photos/seed/${i}/200/300`, // Random profile picture
     });
   }
   return players;
