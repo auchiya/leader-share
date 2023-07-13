@@ -2,6 +2,7 @@ import React from "react";
 import { Player } from "./types/Player";
 import { BsShare } from "react-icons/bs";
 import Avatar from "react-avatar";
+import { ShareLeaderBoard } from "./ShareLeaderBoard";
 
 type Props = {
   player: Player;
@@ -15,9 +16,7 @@ const PlayerItem: React.FC<Props> = ({ player }) => (
     <td>{player.name}</td>
     <td>{player.score}</td>
     <td>
-      <button>
-        <BsShare />
-      </button>
+      <ShareLeaderBoard />
     </td>
   </tr>
 );
