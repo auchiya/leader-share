@@ -12,7 +12,7 @@ export const LeaderBoardPage = () => {
 
     return (
         <>
-            <h1>Leaderboards</h1>
+            <h1 className="mainTitle">Placed Bets</h1>
             <ul className="nav nav-tabs">
                 {leaderboards.map((leaderboard, index) => (
                 <li className="nav-item" key={index}>
