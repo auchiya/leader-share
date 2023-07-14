@@ -10,12 +10,16 @@ const TopBarContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding: 10px;
-  background-color: #f9f9f9;
+  background-color: #00a826;
   border-bottom: 1px solid #ddd;
 `;
 
 const UserAvatar = styled(Avatar)`
-  margin-left: 10px;
+  margin-right: 18px;
+`;
+
+const LoginButton = styled.button`
+margin-right: 18px;
 `;
 
 const TopBar = () => {
@@ -32,9 +36,9 @@ const TopBar = () => {
       {user ? (
         <>
           <UserAvatar name={user.name} size="50" round={true} />
-          <button onClick={logout}>
+          <LoginButton onClick={logout}>
             <FiLogOut />
-          </button>
+          </LoginButton>
           <ShareLeaderBoard />
         </>
       ) : (

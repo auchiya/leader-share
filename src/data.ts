@@ -16,9 +16,17 @@ const generatePlayers = (start: number): Player[] => {
 
 const leaderboards: Leaderboard[] = [
   {
-    name: "Placed Bets",
+    name: "Daily",
     players: generatePlayers(1).sort((a, b) => a.score < b.score ? 1 : -1)
-    },
+  },
+  {
+    name: "Weekly",
+    players: generatePlayers(1).sort((a, b) => a.score < b.score ? 1 : -1)
+  },
+  {
+    name: "Monthly",
+    players: generatePlayers(1).sort((a, b) => a.score < b.score ? 1 : -1)
+  },
   // Add more leaderboards as needed
 ];
 
