@@ -4,6 +4,7 @@ import styled from "styled-components"
 import HorseBadge from './assets/badges/horse_badge.png';
 import SportsBadge from './assets/badges/sports_badge.png';
 import CasinoBadge from './assets/badges/casino_badge.png';
+import { Link } from "react-router-dom";
 
 export const BadgeList = () => {
 
@@ -13,9 +14,15 @@ export const BadgeList = () => {
 
     return (
         <Container>
-            <Badge src={HorseBadge} onClick={handleBadgeClick} />
-            <Badge src={SportsBadge} onClick={handleBadgeClick} />
-            <Badge src={CasinoBadge} onClick={handleBadgeClick} />
+            <Link to="/badgedetails"> 
+                <Badge src={HorseBadge} onClick={handleBadgeClick} />
+            </Link>
+            <Link to="/badgedetails"> 
+                <Badge src={SportsBadge} onClick={handleBadgeClick} />
+            </Link>
+            <Link to="/badgedetails">
+                <Badge src={CasinoBadge} onClick={handleBadgeClick} />
+            </Link>
         </Container>
     )
 }

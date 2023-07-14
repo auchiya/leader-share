@@ -38,26 +38,27 @@ const Label = styled.p`
 const PlayerItem: React.FC<Props> = ({ position, player }) => {
   const context = React.useContext(UserContext);
   const { user } = context!;
-  var myclass="";
+  var myclass = "";
   switch (position) {
     case 1:
-      myclass="first"
+      myclass = "first";
       break;
 
     case 2:
-      myclass="second"
+      myclass = "second";
       break;
 
     case 3:
-      myclass="third"
+      myclass = "third";
       break;
-  
+
     default:
       break;
   }
   return (
     <tr>
-      <Card className={myclass}
+      <Card
+        className={myclass}
         style={{
           backgroundColor:
             user && user.name === player.name ? "yellow" : "#f9f9f9",
