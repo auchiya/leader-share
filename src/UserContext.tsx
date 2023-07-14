@@ -2,7 +2,7 @@ import React from "react";
 
 export const UserContext = React.createContext<
   | {
-      user: { name: string };
+      user: { name: string } | null;
       login: (username: string) => void;
       logout: () => void;
     }

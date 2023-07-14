@@ -5,6 +5,7 @@ import Avatar from "react-avatar";
 import { ShareLeaderBoard } from "./ShareLeaderBoard";
 
 type Props = {
+  position: number;
   player: Player;
 };
 
@@ -34,18 +35,35 @@ const Label = styled.p`
   margin-bottom: 5px;
 `;
 
-const PlayerItem: React.FC<Props> = ({ player }) => {
+const PlayerItem: React.FC<Props> = ({ position, player }) => {
   const context = React.useContext(UserContext);
   const { user } = context!;
+  var myclass="";
+  switch (position) {
+    case 1:
+      myclass="first"
+      break;
 
+    case 2:
+      myclass="second"
+      break;
+
+    case 3:
+      myclass="third"
+      break;
+  
+    default:
+      break;
+  }
   return (
     <tr>
-      <Card
+      <Card className={myclass}
         style={{
           backgroundColor:
             user && user.name === player.name ? "yellow" : "#f9f9f9",
         }}
       >
+        <CardItem>#{position}</CardItem>
         <CardItem>
           <Avatar name={player.name} size="50" round={true} />
         </CardItem>
