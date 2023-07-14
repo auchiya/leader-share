@@ -1,4 +1,5 @@
 import React from "react";
+import { BsFillShareFill } from "react-icons/bs";
 
 export const ShareLeaderBoard = () => {
   const handleShare = async () => {
@@ -24,5 +25,9 @@ export const ShareLeaderBoard = () => {
     }
   };
 
-  return <button onClick={handleShare}>Share Image</button>;
+  return (
+    <button onClick={handleShare}>
+      <BsFillShareFill />
+    </button>
+  );
 };

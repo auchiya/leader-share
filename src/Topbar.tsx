@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Avatar from "react-avatar";
 import { UserContext } from "./UserContext";
+import { ShareLeaderBoard } from "./ShareLeaderBoard";
+import { FiLogOut } from "react-icons/fi";
 
 const TopBarContainer = styled.div`
   display: flex;
@@ -30,7 +32,10 @@ const TopBar = () => {
       {user ? (
         <>
           <UserAvatar name={user.name} size="50" round={true} />
-          <button onClick={logout}>Logout</button>
+          <button onClick={logout}>
+            <FiLogOut />
+          </button>
+          <ShareLeaderBoard />
         </>
       ) : (
         <button onClick={() => login("Player 3")}>Login</button>
