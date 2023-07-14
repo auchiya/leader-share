@@ -23,7 +23,6 @@ export const BadgeList = () => {
             <Link to="/badgedetails">
                 <Badge src={CasinoBadge} onClick={handleBadgeClick} />
             </Link>
-            
         </Container>
     )
 }
