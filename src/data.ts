@@ -16,13 +16,9 @@ const generatePlayers = (start: number): Player[] => {
 
 const leaderboards: Leaderboard[] = [
   {
-    name: "Leaderboard 1",
+    name: "Placed Bets",
     players: generatePlayers(1).sort((a, b) => a.score < b.score ? 1 : -1)
     },
-  {
-    name: "Leaderboard 2",
-    players: generatePlayers(51).sort((a, b) => a.score < b.score ? 1 : -1),
-  },
   // Add more leaderboards as needed
 ];
 
