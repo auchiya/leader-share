@@ -1,6 +1,6 @@
 import React from "react";
 import { Player } from "./types/Player";
-import { BsShare } from "react-icons/bs";
+import { AiOutlineStar } from "react-icons/ai";
 import Avatar from "react-avatar";
 import { ShareLeaderBoard } from "./ShareLeaderBoard";
 
@@ -76,7 +76,9 @@ const PlayerItem: React.FC<Props> = ({ position, player }) => {
           {player.score}
         </CardItem>
         <CardItem>
-          <ShareLeaderBoard />
+          <button>
+            <AiOutlineStar />
+          </button>
         </CardItem>
       </Card>
     </tr>
