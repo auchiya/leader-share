@@ -33,7 +33,7 @@ const TopBar = () => {
           <button onClick={logout}>Logout</button>
         </>
       ) : (
-        <button onClick={() => login("John Doe")}>Login</button>
+        <button onClick={() => login("Player 3")}>Login</button>
       )}
     </TopBarContainer>
   );

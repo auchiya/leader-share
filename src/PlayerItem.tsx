@@ -9,6 +9,7 @@ type Props = {
 };
 
 import styled from "styled-components";
+import { UserContext } from "./UserContext";
 
 const Card = styled.div`
   display: flex;
@@ -33,25 +34,35 @@ const Label = styled.p`
   margin-bottom: 5px;
 `;
 
-const PlayerItem: React.FC<Props> = ({ player }) => (
-  <tr>
-    <Card>
-      <CardItem>
-        <Avatar name={player.name} size="50" round={true} />
-      </CardItem>
-      <CardItem>
-        <Label>Name</Label>
-        {player.name}
-      </CardItem>
-      <CardItem>
-        <Label>Score</Label>
-        {player.score}
-      </CardItem>
-      <CardItem>
-        <ShareLeaderBoard />
-      </CardItem>
-    </Card>
-  </tr>
-);
+const PlayerItem: React.FC<Props> = ({ player }) => {
+  const context = React.useContext(UserContext);
+  const { user } = context!;
+
+  return (
+    <tr>
+      <Card
+        style={{
+          backgroundColor:
+            user && user.name === player.name ? "yellow" : "#f9f9f9",
+        }}
+      >
+        <CardItem>
+          <Avatar name={player.name} size="50" round={true} />
+        </CardItem>
+        <CardItem>
+          <Label>Name</Label>
+          {player.name}
+        </CardItem>
+        <CardItem>
+          <Label>Score</Label>
+          {player.score}
+        </CardItem>
+        <CardItem>
+          <ShareLeaderBoard />
+        </CardItem>
+      </Card>
+    </tr>
+  );
+};
 
 export default PlayerItem;

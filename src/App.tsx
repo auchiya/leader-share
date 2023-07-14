@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <UserProvider>
-        <TopBar username="John Doe" />
+        <TopBar />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LeaderBoardPage />} />
