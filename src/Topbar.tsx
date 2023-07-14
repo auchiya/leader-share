@@ -32,10 +32,10 @@ const TopBar = () => {
       {user ? (
         <>
           <UserAvatar name={user.name} size="50" round={true} />
+          <ShareLeaderBoard />
           <button onClick={logout}>
             <FiLogOut />
           </button>
-          <ShareLeaderBoard />
         </>
       ) : (
         <button onClick={() => login("Player 3")}>Login</button>
